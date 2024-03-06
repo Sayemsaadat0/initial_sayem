@@ -68,6 +68,7 @@
             </div> 
         </li>
     </ul>
+    
     {{-- <script>
         onclick="toggleAccordion('Second')" // this line will be within the btton
         function toggleAccordion(id) {
