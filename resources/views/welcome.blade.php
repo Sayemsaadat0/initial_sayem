@@ -13,68 +13,65 @@
 
         <!-- Styles -->
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <style>
-            .accordion {
-                margin: 60px auto;
-                width: 500px;
-            }
-    
-            .accordion li {
-                list-style: none;
-                width: 100%;
-                background: rgb(146, 135, 158);
-                padding: 10px;
-                margin: 10px;
-                border-radius: 10px;
-            }
-    
-            .accordion li label {
-                cursor: pointer;
-            }
-    
-            input[type="radio"] {
-                display: none;
-                width: 100%;
-            }
-    
-            .accordion .content {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 1s ease-in-out;
-            }
-    
-            .accordion input[type="radio"]:checked + label + .content {
-                max-height: 400px;
-            }
-        </style>
+
     </head>
    
-<body> 
-    <ul class="accordion">
-        <li>
-            <input type="radio" name="accordion" id="first" >
-            <label for="first" >First</label>
-            <div class="content">
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nam ipsum soluta voluptatum, impedit perspiciatis consequuntur vitae at perferendis labore aliquam incidunt quibusdam dolorem corporis ab quae necessitatibus dolore laudantium maxime earum pariatur quis reprehenderit non distinctio. Natus, repellat necessitatibus?</p>
-
-                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nam ipsum soluta voluptatum, impedit perspiciatis consequuntur vitae at perferendis labore aliquam incidunt quibusdam dolorem corporis ab quae necessitatibus dolore laudantium maxime earum pariatur quis reprehenderit non distinctio. Natus, repellat necessitatibus?</p>
-            </div> 
-        </li>
-        <li>
-            <input type="radio" name="accordion" id="Second" >
-            <label for="Second">Second</label>
-            <div class="content">
-                <p>  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nam ipsum soluta voluptatum, impedit perspiciatis consequuntur vitae at perferendis labore aliquam incidunt quibusdam dolorem corporis ab quae necessitatibus dolore laudantium maxime earum pariatur quis reprehenderit non distinctio. Natus, repellat necessitatibus?</p>
-            </div> 
-        </li>
-    </ul>
+<body>
+    <div class="py-24 px-8 max-w-5xl mx-auto">
+        <ul >
+            <li>
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                    <span class="flex-1 text-base-content">How secure is my insurance information?</span>
+                    <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-300 ease-out false"></rect>
+                    </svg>
+                </button>
+                <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 1s ease-in-out 0s;">
+                    <div class="pb-5 leading-relaxed">
+                        <div class="space-y-2 leading-relaxed">We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                    <span class="flex-1 text-base-content">How can I customize my insurance coverage?</span>
+                    <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                    </svg>
+                </button>
+                <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                    <div class="pb-5 leading-relaxed">
+                        <div class="space-y-2 leading-relaxed">Our insurance plans are customizable. You can tailor your coverage to meet your specific needs and budget.</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded="false" onclick="toggleFAQ(this)">
+                    <span class="flex-1 text-base-content">Is there a waiting period for insurance claims?</span>
+                    <svg class="flex-shrink-0 w-4 h-4 ml-auto fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out false"></rect>
+                        <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out false"></rect>
+                    </svg>
+                </button>
+                <div class="transition-all duration-300 ease-in-out max-h-0 overflow-hidden" style="transition: max-height 0.3s ease-in-out 0s;">
+                    <div class="pb-5 leading-relaxed">
+                        <div class="space-y-2 leading-relaxed">There may be a waiting period for certain insurance claims, depending on the policy terms and conditions. Please refer to your policy documents for details.</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
     
-    {{-- <script>
-        onclick="toggleAccordion('Second')" // this line will be within the btton
-        function toggleAccordion(id) {
-            const radio = document.getElementById(id);
-            radio.checked = !radio.checked; 
+    <script>
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            button.setAttribute("aria-expanded", button.getAttribute("aria-expanded") === "false" ? "true" : "false");
+            content.style.maxHeight = button.getAttribute("aria-expanded") === "true" ? content.scrollHeight + "px" : "0";
         }
-    </script> --}}
+    </script>
+     
+
 </body>
 </html>
