@@ -1,49 +1,92 @@
-   
-   
- <body class="p-4">
-    <div class="max-w-md mx-auto mt-24">
-        <!-- Accordion Item 1 -->
-        <div class="overflow-hidden shadow-md bg-white transition-all duration-500">
-            <div class="bg-gray-100 p-4 cursor-pointer flex justify-between items-center" onclick="toggleAccordion(1)">
-                <h3 class="font-semibold text-lg">Accordion Item 1</h3>
-                <span class="transform transition-transform" id="arrow-icon-1">▼</span>
-            </div>
-            <div class="p-4 hidden" id="accordion-content-1">
-                <!-- Content for Accordion Item 1 -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    
-        <!-- Accordion Item 2 -->
-        <div class="overflow-hidden shadow-md bg-white transition-all duration-500">
-            <div class="bg-gray-100 p-4 cursor-pointer flex justify-between items-center" onclick="toggleAccordion(2)">
-                <h3 class="font-semibold text-lg">Accordion Item 2</h3>
-                <span class="transform transition-transform" id="arrow-icon-2">▼</span>
-            </div>
-            <div class="p-4 hidden" id="accordion-content-2">
-                <!-- Content for Accordion Item 2 -->
-                <p>Nulla facilisi. Suspendisse potenti. Vestibulum nec velit nec urna tincidunt vehicula.</p>
-            </div>
-        </div>
-    
-        <!-- Accordion Item 3 -->
-        <div class="overflow-hidden shadow-md bg-white transition-all duration-500">
-            <div class="bg-gray-100 p-4 cursor-pointer flex justify-between items-center" onclick="toggleAccordion(3)">
-                <h3 class="font-semibold text-lg">Accordion Item 3</h3>
-                <span class="transform transition-transform" id="arrow-icon-3">▼</span>
-            </div>
-            <div class="p-4 hidden" id="accordion-content-3">
-                <!-- Content for Accordion Item 3 -->
-                <p>Vestibulum ullamcorper, justo nec tincidunt feugiat, tortor justo eleifend nulla.</p>
-            </div>
-        </div>
-    </div>
-    
-    {{-- <script>
-        function toggleAccordion(index) {
-            document.getElementById(`accordion-content-${index}`).classList.toggle("hidden");
-            document.getElementById(`arrow-icon-${index}`).classList.toggle("rotate-180");
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
         }
-    </script> --}}
-    </body>
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .nested {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Accordion</h2>
+
+    <ul class="accordion">
+        <li>
+            <button class="accordion">Section 1</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Section 2</button>
+            <div class="panel">
+                <ul class="nested">
+                    <li>
+                        <button class="accordion">Sub Section 2</button>
+                        <div class="panel">
+                            <p>Nested content 1</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <button class="accordion">Section 3</button>
+            <div class="panel">
+                <ul class="nested">
+                    <li>
+                        <button class="accordion">Sub Section 3</button>
+                        <div class="panel">
+                            <p>Nested content 1</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+    <script>
+        var acc = document.querySelectorAll(".accordion");
+
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
