@@ -1,19 +1,12 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>Laravelll</title>
-
-        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        {{-- <link rel="stylesheet" href="/resources/css/app.css"> --}}
-
-        <!-- Styles -->
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
     </head>
    
 <body>
@@ -47,4 +40,195 @@
      
 
 </body>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laravelll</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+
+        .chart-bar {
+            border: 1px solid #000;
+            width: 30px;
+            /* Adjust width as needed */
+            background-color: #6c757d;
+            margin: 0 5px;
+        }
+    </style>
+
+    {{--  --}}
+
+</head>
+
+
+{{-- chart 1 --}}
+
+<body>
+    <div class="flex flex-col items-center w-full p-6 pb-6 mt-10 bg-white rounded-lg shadow-xl sm:p-8">
+        <h2 class="text-xl font-bold">Monthly Revenue</h2>
+        <span class="text-sm font-semibold text-gray-500">2020</span>
+        <div id="chart" class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
+            <!-- JavaScript will dynamically populate this section -->
+        </div>
+        <div class="flex w-full mt-3">
+            <div class="flex items-center ml-auto">
+                <span class="block w-4 h-4 bg-indigo-400"></span>
+                <span class="ml-1 text-xs font-medium">Existing</span>
+            </div>
+            <div class="flex items-center ml-4">
+                <span class="block w-4 h-4 bg-indigo-300"></span>
+                <span class="ml-1 text-xs font-medium">Upgrades</span>
+            </div>
+            <div class="flex items-center ml-4">
+                <span class="block w-4 h-4 bg-indigo-200"></span>
+                <span class="ml-1 text-xs font-medium">New</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample dynamic data values
+        const revenueData = [15000, 20000, 500000, 3000, 400000000000]; // Example data in millions
+
+        function updateChart() {
+            const chart = document.getElementById('chart');
+            chart.innerHTML = ''; // Clear existing content
+
+            // Find the maximum value to use for scaling
+            const maxValue = Math.max(...revenueData);
+            const maxBarHeight = 400;
+            const minBarHeight = 1;
+            const scale = (maxBarHeight - minBarHeight) / maxValue;
+            console.log('scale', scale)
+            revenueData.forEach(value => {
+                const percentage = (value / maxValue) * 100;
+                console.log('percentage', percentage)
+                let barHeight = Math.round(percentage * scale + minBarHeight);
+                // Ensure the bar height is within the specified range
+                barHeight = Math.max(minBarHeight, Math.min(maxBarHeight, barHeight));
+                console.log('barHeight', barHeight)
+                const bar = document.createElement('div');
+                bar.style.height = `${barHeight}px`;
+                bar.classList.add('chart-bar');
+                chart.appendChild(bar);
+            });
+        }
+        updateChart();
+    </script>
+</body>
+
 </html>
+
+
+{{-- 
+    
+     <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$45,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Feb</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Mar</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$50,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-6 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Apr</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$47,500</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">May</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$55,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Jun</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$60,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-16 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-20 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Jul</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$57,500</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-24 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Aug</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$67,500</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-10 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-32 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Sep</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$65,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow bg-indigo-400 h-28"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Oct</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$70,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-40 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Nov</span>
+            </div>
+            <div class="relative flex flex-col items-center flex-grow pb-5 group">
+                <span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">$75,000</span>
+                <div class="flex items-end w-full">
+                    <div class="relative flex justify-center flex-grow h-12 bg-indigo-200"></div>
+                    <div class="relative flex justify-center flex-grow h-8 bg-indigo-300"></div>
+                    <div class="relative flex justify-center flex-grow h-40 bg-indigo-400"></div>
+                </div>
+                <span class="absolute bottom-0 text-xs font-bold">Dec</span>
+            </div>
+    --}}
