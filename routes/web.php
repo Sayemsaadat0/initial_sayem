@@ -27,3 +27,8 @@ Route::get('/accordion', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+
+Route::get('/admit', function () {
+    return view('admit');
+});
