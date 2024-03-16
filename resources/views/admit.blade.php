@@ -9,78 +9,92 @@
     <title>Document</title>
 </head>
 
-<body class="max-w-[1000px] mx-auto border-4 border-cyan-400">
-    <div class="flex w-full justify-between items-center p-5  ">
-        <div><img src="https://cdn.pixabay.com/photo/2023/01/13/17/44/red-7716610_640.png" class="rounded-full w-28 h-28"
-                alt=""></div>
-        <div class="text-center">
-            <h3 class="text-xl">Pallabi Mazedul Islam Model High School</h3>
-            <p class="text-sm">13/14,Pallabi, Dhaka - 1216. <br>
+<body>
 
-                Contact No: 01309108183 <br>
+    <div class="max-w-[1100px] mx-auto border-4 border-amber-400">
+        <div class="flex w-full justify-between items-center p-5  ">
+            <div><img src="https://cdn.pixabay.com/photo/2023/01/13/17/44/red-7716610_640.png"
+                    class="rounded-full w-28 h-28" alt=""></div>
+            <div class="text-center">
+                <h3 class="text-xl">Pallabi Mazedul Islam Model High School</h3>
+                <p class="text-sm">13/14,Pallabi, Dhaka - 1216. <br>
 
-                Email: mimodelschool1978@gmail.com <br>
+                    Contact No: 01309108183 <br>
 
-                Website: http://pmimhs.edu.bd/ <br>
+                    Email: mimodelschool1978@gmail.com <br>
 
-                Print date:14-03-2024</p>
-            <p class="text-purple-500 font-bold font-semi-bold text-center">Admit Card</p>
+                    Website: http://pmimhs.edu.bd/ <br>
+
+                    Print date:14-03-2024</p>
+                <p class="text-purple-500 font-bold font-semi-bold text-center">Admit Card</p>
+            </div>
+            <div><img src="https://cdn.pixabay.com/photo/2023/01/13/17/44/red-7716610_640.png"
+                    class="rounded-full w-28 h-28" alt=""></div>
         </div>
-        <div><img src="https://cdn.pixabay.com/photo/2023/01/13/17/44/red-7716610_640.png"
-                class="rounded-full w-28 h-28" alt=""></div>
-    </div>
-
-    <div class="flex justify-between  w-full p-5">
-        <div>
-            <p class="grid grid-cols-3  gap-5">
-                <span>Student Name</span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
-            <p class="grid grid-cols-3  gap-5">
-                <span>Student </span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
-            <p class="grid grid-cols-3  gap-5"><span>Student Name</span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
-            <p class="grid grid-cols-3  gap-5"><span> Name</span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
+        <div class="flex justify-between w-full p-5">
+            <div class="text-left ">
+                <div class="grid grid-cols-3 gap-20">
+                    <p>Student Name</p>
+                    <p>: Rafin da Bolda</p>
+                </div>
+                <div class="grid grid-cols-3 gap-20">
+                    <p>Class</p>
+                    <p>: Play</p>
+                </div>
+                <div class="grid grid-cols-3 gap-20">
+                    <p>Roll</p>
+                    <p>: Play</p>
+                </div>
+                <div class="grid grid-cols-3 gap-20">
+                    <p>Group</p>
+                    <p>: Play</p>
+                </div>
+                <div class="grid grid-cols-3 gap-20">
+                    <p>Section</p>
+                    <p>: Play</p>
+                </div>
+            </div>
             <div>
-                <p class="text-xl p-3 bg-cyan-400 w-fit">Instruction</p>
-                <p>
-                    <li>1</li>
-                    <li>1</li>
-                    <li>1</li>
-                </p>
+                <div>
+                    <div class="grid grid-cols-3 gap-20">
+                        <p>Student ID</p>
+                        <p>: da Bolda</p>
+                    </div>
+                    <div class="grid grid-cols-3  gap-20">
+                        <p>Exam Name </p>
+                        <p>: Rafin Bolda</p>
+                    </div>
+                    <div class="grid grid-cols-3  gap-20">
+                        <p>Year </p>
+                        <p>: Rafin da </p>
+                    </div>
+                    <div class="grid grid-cols-3  gap-20">
+                        <p>Father Name </p>
+                        <p>: Bolda</p>
+                    </div>
+                    <div class="grid grid-cols-3  gap-20">
+                        <p>Mobile No </p>
+                        <p>: Rafin da Bolda</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <p class="grid grid-cols-3  gap-5">
-                <span>Student Name</span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
+        <div class="p-5">
+            <p class="text-xl px-3 py-1 bg-cyan-400/40 w-fit">Instruction</p>
+            <p>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis? Lorem, ipsum dolor sit amet
+                </li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, necessitatibus.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, blanditiis!</li>
             </p>
-            <p class="grid grid-cols-3  gap-5">
-                <span>Student </span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
-            <p class="grid grid-cols-3  gap-5"><span>Student Name</span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
-            <p class="grid grid-cols-3  gap-5"><span> Name</span>
-                <span class="text-center">:</span>
-                <span>Rafin habla</span>
-            </p>
+        </div>
 
+        <div class="flex justify-between items-center p-5 mt-10">
+            <div class="border-t border-t-black">Class Teacher</div>
+            <div class="border-t border-t-black">Headmaster</div>
         </div>
     </div>
+
 </body>
 
 </html>
