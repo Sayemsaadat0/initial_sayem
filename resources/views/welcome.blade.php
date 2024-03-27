@@ -89,6 +89,7 @@
                 <a href="/admit" class="text-gray-300 hover:text-white px-4">Admit</a>
                 <a href="/accordion" class="text-gray-300 hover:text-white px-4">accordion</a>
                 <a href="/dashboard" class="text-gray-300 hover:text-white px-4">Dashboard</a>
+                <a href="/profile" class="text-gray-300 hover:text-white px-4">Profile</a>
             </div>
             <!-- Mobile Menu Button (Hidden on Desktop) -->
             <div class="md:hidden">

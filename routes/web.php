@@ -36,3 +36,6 @@ Route::get('/admit', function () {
 Route::get('/form', function () {
     return view('form');
 });
+Route::get('/profile', function () {
+    return view('profile');
+});

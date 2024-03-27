@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-    <style>
-        .border border-blue-400_style{
-            border border-blue-400 : 1px solid rgb(99, 99, 99);
-            padding: 6px;
-        }
-    </style>
+    <title>Student Form</title>
 </head>
-
 <body class="bg-blue-100">
-
     <div class=" bg-white w-[1500px] px-[120px] mx-auto">
         <div class="flex w-full justify-between items-center p-5">
-            <div><img src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
-                    class="rounded-full w-28 h-28" alt=""></div>
+            <div>
+                <img src="https://i.pinimg.com/originals/82/c6/5b/82c65b9bb0a75026fc4c82a438b4cc9b.jpg"
+                    class="rounded-full w-28 h-28" alt="">
+                </div>
             <div class="text-center">
                 <h3 class="text-2xl text-blue-400 font-bold">Pallabi Mazedul Islam Model High School</h3>
                 <p class="text-sm">13/14,Pallabi, Dhaka - 1216. <br>
                     Contact No: 01309108183 <br>
                     Email: mimodelschool1978@gmail.com <br>
                     Website: http://pmimhs.edu.bd/ <br>
-
                    <span class="text-red-500"> Print date:14-03-2024</span></p>
                 <p class="font-bold font-semi-bold text-center text-xl">Student Information</p>
             </div>
@@ -74,7 +66,6 @@
             <div class="border-l border-b border-black p-1.5 col-span-1"> রক্তের গ্রুপ</div>
             <div class="border-l border-b border-r border-black p-1.5 col-span-1">বি +</div>
         </div>
-
         {{-- guardian Info --}}
         <div class="grid grid-cols-12 mt-1">
             <div class="border-t  border-b border-l border-t  border-black p-1.5 col-span-2"> পিতার নাম </div>
@@ -126,7 +117,6 @@
             <div class="border-b border-l border-black p-1.5 col-span-2">জেলা</div>
             <div class="border-b border-l border-r border-black p-1.5 col-span-5"></div>
             {{--  --}}
-
             <div class="border border-black p-1.5 col-span-12 mt-1">পূর্বে যে প্রতিষ্ঠানে অধ্যায়ন করেছে তার নাম </div>
             <div class="border-b border-l border-black p-1.5 col-span-2">শ্রেনী</div>
             <div class="border-b border-l border-black p-1.5 col-span-2"></div>
@@ -135,7 +125,6 @@
             <div class="border-b border-l border-black p-1.5 col-span-2">ফলাফল</div>
             <div class="border-b border-l border-r border-black p-1.5 col-span-2"></div>
         </div>
-
         <div class="py-10 mt-20 flex justify-between items-center">
             <div class="border-t border-black pt-2 w-[25%] text-center">ছাত্রের পুর্নাঙ্গ সাক্ষর</div>
             <div class="border-t border-black pt-2 w-[25%] text-center">অভিভাবকের সাক্ষর এবং তারিখ</div>
