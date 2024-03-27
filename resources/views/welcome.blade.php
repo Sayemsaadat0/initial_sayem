@@ -74,6 +74,37 @@
 {{-- chart 1 --}}
 
 <body>
+    {{--  --}}
+
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div>
+                <a href="#" class="text-white font-bold text-lg">Logo</a>
+            </div>
+            <!-- Navigation Links -->
+            <div class="hidden md:block">
+                <a href="/" class="text-gray-300 hover:text-white px-4">Home</a>
+                <a href="/form" class="text-gray-300 hover:text-white px-4">Form</a>
+                <a href="/admit" class="text-gray-300 hover:text-white px-4">Admit</a>
+                <a href="/accordion" class="text-gray-300 hover:text-white px-4">accordion</a>
+                <a href="/dashboard" class="text-gray-300 hover:text-white px-4">Dashboard</a>
+            </div>
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    {{--  --}}
+
+
     <div class="flex flex-col items-center w-full p-6 pb-6 mt-10 bg-white rounded-lg shadow-xl sm:p-8">
         <h2 class="text-xl font-bold">Monthly Revenue</h2>
         <span class="text-sm font-semibold text-gray-500">2020</span>

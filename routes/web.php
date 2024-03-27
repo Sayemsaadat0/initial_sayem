@@ -32,3 +32,7 @@ Route::get('/dashboard', function () {
 Route::get('/admit', function () {
     return view('admit');
 });
+
+Route::get('/form', function () {
+    return view('form');
+});
